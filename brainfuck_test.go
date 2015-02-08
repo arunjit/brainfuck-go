@@ -11,7 +11,7 @@ func TestEvalToString(t *testing.T) {
 	input := `++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---
 .+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.`
 	output := brainfuck.EvalToString(input)
-	if output != "Hello World!" {
+	if output != "Hello World!\n" {
 		t.Errorf("Unexpected output: <<%s>>\n", output)
 	}
 }
