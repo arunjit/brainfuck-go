@@ -2,13 +2,6 @@
 // Currently does not support input.
 package brainfuck
 
-import "fmt"
-
-// Eval evaluates brainfuck code.
-func Eval(input string) {
-	fmt.Println(EvalToString(input))
-}
-
 // EvalToString evaluates brainfuck code to outputs to string
 func EvalToString(input string) string {
 	array := make([]rune, 256)
@@ -43,9 +36,9 @@ func EvalToString(input string) string {
 				if loopIndex == -1 || loops[loopIndex] != i {
 					loopIndex++
 					loops[loopIndex] = i
-				} else {
-					skip = true
 				}
+			} else {
+				skip = true
 			}
 		case ']':
 			skip = false
