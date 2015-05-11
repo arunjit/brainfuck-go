@@ -2,7 +2,7 @@
 // Currently does not support input.
 package brainfuck
 
-// EvalToString evaluates brainfuck code to outputs to string
+// EvalToString evaluates brainfuck code and outputs to string
 func EvalToString(input string) string {
 	array := make([]rune, 256)
 	ptr := 0
